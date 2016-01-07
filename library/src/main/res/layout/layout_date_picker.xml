@@ -16,7 +16,7 @@
             android:id="@+id/container_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/ff_accent"
+            android:background="@color/ff_primary_light"
             android:padding="5dp" >
 
             <Button
