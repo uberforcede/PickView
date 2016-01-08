@@ -1,22 +1,10 @@
 <resources>
 
-    <!-- Financefox style guide colors. Let's try to keep this as clean as possible. -->
-
-    <!-- FF colors-->
-    <color name="ff_accent">#AE9676</color>
-    <color name="ff_accent_dark">#6E5430</color>
-    <color name="ff_accent_light">#D1BDA3</color>
-    <color name="ff_accent_lighter">#FDF0DE</color>
-
-    <color name="ff_primary">#0D1D31</color>
     <color name="ff_primary_light">#1A2D45</color>
     <color name="ff_primary_dark">#040F1E</color>
 
-    <!-- Basic colors -->
     <color name="ff_white">#FFFFFF</color>
-    <color name="ff_black">#000000</color>
-    <color name="ff_transparent">#00000000</color>
-    <color name="ff_shadow">#11000000</color>
     <color name="ff_gray">#FF919193</color>
+    <color name="ff_shadow">#11000000</color>
 
 </resources>
