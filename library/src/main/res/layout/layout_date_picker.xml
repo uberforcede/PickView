@@ -2,21 +2,21 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/ff_shadow" >
+                android:background="@color/picker_shadow" >
 
     <LinearLayout
         android:id="@+id/container_picker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/ff_white"
+        android:background="@color/picker_white"
         android:orientation="vertical" >
 
         <RelativeLayout
             android:id="@+id/container_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/ff_primary_light"
+            android:background="@color/picker_primary_light"
             android:padding="5dp" >
 
             <Button
@@ -25,7 +25,7 @@
                 android:layout_height="30dp"
                 android:background="@null"
                 android:text="@string/_GEN_cancel"
-                android:textColor="@color/ff_white"
+                android:textColor="@color/picker_white"
                 android:paddingLeft="15dp"
                 android:textAllCaps="false"
                 android:textSize="18sp" />
@@ -38,7 +38,7 @@
                 android:background="@null"
                 android:paddingRight="15dp"
                 android:text="@string/_GEN_apply"
-                android:textColor="@color/ff_white"
+                android:textColor="@color/picker_white"
                 android:textAllCaps="false"
                 android:textSize="18sp" />
         </RelativeLayout>
@@ -46,7 +46,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            android:background="@color/ff_white"
+            android:background="@color/picker_white"
             android:paddingTop="3dp"
             android:paddingBottom="3dp">
 

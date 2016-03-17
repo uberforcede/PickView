@@ -73,9 +73,9 @@ public class LoopView extends View {
 
     private void initLoopView(Context context) {
         textSize = 0;
-        colorGray = ActivityCompat.getColor(getContext(), R.color.ff_gray);
-        colorBlack = ActivityCompat.getColor(getContext(), R.color.ff_primary_dark);
-        colorGrayLight = ActivityCompat.getColor(getContext(), R.color.ff_gray);
+        colorGray = ActivityCompat.getColor(getContext(), R.color.picker_grey);
+        colorBlack = ActivityCompat.getColor(getContext(), R.color.picker_primary_dark);
+        colorGrayLight = ActivityCompat.getColor(getContext(), R.color.picker_grey);
         lineSpacingMultiplier = 2.0F;
         isLoop = true;
         initPosition = -1;
