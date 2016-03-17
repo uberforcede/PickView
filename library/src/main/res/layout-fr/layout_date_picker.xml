@@ -27,8 +27,8 @@
                 android:text="@string/_GEN_cancel"
                 android:textColor="@color/ff_white"
                 android:paddingLeft="15dp"
-                android:textAllCaps="false"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/btn_confirm"
@@ -36,11 +36,11 @@
                 android:layout_height="30dp"
                 android:layout_alignParentRight="true"
                 android:background="@null"
-                android:paddingRight="15dp"
                 android:text="@string/_GEN_apply"
                 android:textColor="@color/ff_white"
-                android:textAllCaps="false"
-                android:textSize="18sp" />
+                android:paddingRight="15dp"
+                android:textSize="18sp"
+                android:textAllCaps="false" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -73,6 +73,7 @@
                     android:layout_marginLeft="1dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1" />
+
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>

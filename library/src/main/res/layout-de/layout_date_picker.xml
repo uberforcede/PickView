@@ -36,8 +36,8 @@
                 android:layout_height="30dp"
                 android:layout_alignParentRight="true"
                 android:background="@null"
-                android:paddingRight="15dp"
                 android:text="@string/_GEN_apply"
+                android:paddingRight="15dp"
                 android:textColor="@color/ff_white"
                 android:textAllCaps="false"
                 android:textSize="18sp" />
@@ -58,21 +58,21 @@
                     android:id="@+id/picker_day"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"/>
 
                 <com.bruce.pickerview.LoopView
                     android:id="@+id/picker_month"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="1dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"/>
 
                 <com.bruce.pickerview.LoopView
                     android:id="@+id/picker_year"
                     android:layout_width="0dp"
-                    android:layout_marginLeft="1dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" />
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"/>
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>

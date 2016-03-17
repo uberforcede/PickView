@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/ff_shadow" >
+                android:background="@color/ff_shadow">
 
     <LinearLayout
         android:id="@+id/container_picker"
@@ -10,14 +10,14 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/ff_white"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/container_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/ff_primary_light"
-            android:padding="5dp" >
+            android:padding="5dp">
 
             <Button
                 android:id="@+id/btn_cancel"
@@ -27,8 +27,8 @@
                 android:text="@string/_GEN_cancel"
                 android:textColor="@color/ff_white"
                 android:paddingLeft="15dp"
-                android:textAllCaps="false"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textAllCaps="false"/>
 
             <Button
                 android:id="@+id/btn_confirm"
@@ -36,43 +36,43 @@
                 android:layout_height="30dp"
                 android:layout_alignParentRight="true"
                 android:background="@null"
-                android:paddingRight="15dp"
                 android:text="@string/_GEN_apply"
                 android:textColor="@color/ff_white"
-                android:textAllCaps="false"
-                android:textSize="18sp" />
+                android:paddingRight="15dp"
+                android:textSize="18sp"
+                android:textAllCaps="false"/>
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:background="@color/ff_white"
-            android:paddingTop="3dp"
-            android:paddingBottom="3dp">
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <com.bruce.pickerview.LoopView
                     android:id="@+id/picker_day"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"/>
 
                 <com.bruce.pickerview.LoopView
                     android:id="@+id/picker_month"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="1dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"/>
 
                 <com.bruce.pickerview.LoopView
                     android:id="@+id/picker_year"
                     android:layout_width="0dp"
-                    android:layout_marginLeft="1dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" />
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"/>
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
