@@ -1,6 +1,6 @@
 <resources>
 
-    <color name="picker_primary_light">#FF7040</color>
+    <color name="picker_primary_light">#FF9F00</color>
     <color name="picker_primary_dark">#040F1E</color>
 
     <color name="picker_white">#FFFFFF</color>
