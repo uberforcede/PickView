@@ -2,6 +2,7 @@ package com.bruce.pickerview.popwindow;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.text.TextUtils;
 import android.view.Gravity;
@@ -16,6 +17,7 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 
 import com.bruce.pickerview.LoopListener;
 import com.bruce.pickerview.LoopView;
@@ -46,6 +48,7 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
     public LoopView dayLoopView;
     public View pickerContainerV;
     public View contentView;//root view
+    public RelativeLayout containerToolbar;
 
     private int minYear; // min year
     private int maxYear; // max year
@@ -53,6 +56,7 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
     private int monthPos = 0;
     private int dayPos = 0;
     private Context mContext;
+    private String color;
 
     List<String> yearList = new ArrayList();
     List<String> monthList = new ArrayList();
@@ -66,12 +70,12 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
      * @param dataDesc like:1900-01-02
      */
     public DatePickerPopWin(Context cxt, String dataDesc,
-            OnDatePickedListener l) {
+            OnDatePickedListener l, String color) {
         this(cxt, DEFAULT_MIN_YEAR, Calendar.getInstance().get(Calendar.YEAR),
                 Calendar.getInstance().get(Calendar.YEAR),
                 Calendar.getInstance().get(Calendar.MONTH),
                 Calendar.getInstance().get(Calendar.DAY_OF_MONTH),
-                dataDesc, l);
+                dataDesc,color, l);
     }
 
     /**
@@ -79,7 +83,7 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
      */
     public DatePickerPopWin(Context cxt,
             OnDatePickedListener l) {
-        this(cxt, DEFAULT_MIN_YEAR, Calendar.getInstance().get(Calendar.YEAR), l);
+        this(cxt, DEFAULT_MIN_YEAR, Calendar.getInstance().get(Calendar.YEAR), l, "#FF9F00");
     }
 
     /**
@@ -90,7 +94,7 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
     public DatePickerPopWin(Context cxt, int minYear, int maxYear, int selectedYear,
             int selectedMonth,
             int selectedDay,
-            String dataDesc, OnDatePickedListener l) {
+            String dataDesc, String color, OnDatePickedListener l) {
 
         this.mContext = cxt;
         this.minYear = minYear;
@@ -99,6 +103,7 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
         this.monthPos = selectedMonth;
         this.dayPos = selectedDay - 1;
         this.mListener = l;
+        this.color = color;
 
         setSelectedDate(dataDesc);
         initView();
@@ -107,8 +112,9 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
     /**
      * Constructor with default date (right now)
      */
-    public DatePickerPopWin(Context cxt, int minYear, int maxYear, OnDatePickedListener l) {
+    public DatePickerPopWin(Context cxt, int minYear, int maxYear, OnDatePickedListener l, String color) {
 
+        this.color = color;
         this.mContext = cxt;
         this.minYear = minYear;
         this.maxYear = maxYear;
@@ -128,7 +134,11 @@ public class DatePickerPopWin extends PopupWindow implements OnClickListener {
         yearLoopView = (LoopView) contentView.findViewById(R.id.picker_year);
         monthLoopView = (LoopView) contentView.findViewById(R.id.picker_month);
         dayLoopView = (LoopView) contentView.findViewById(R.id.picker_day);
+        containerToolbar = (RelativeLayout) contentView.findViewById(R.id.container_toolbar);
         pickerContainerV = contentView.findViewById(R.id.container_picker);
+
+        //Set BackgroundColor
+        containerToolbar.setBackgroundColor(Color.parseColor(color));
 
         //do not loop,default can loop
         yearLoopView.setNotLoop();
